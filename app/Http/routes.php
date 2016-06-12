@@ -27,7 +27,7 @@ Route::get('auth/forget-password', ['as' => 'forget_password', 'uses' => 'Admin\
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'as' => 'admin.'], function () {
 
-    $path = __DIR__ . "\Routes\Admin";
+    $path = __DIR__ . "/Routes/Admin";
     $files = File::allFiles($path);
 
     foreach ($files as $file) {
